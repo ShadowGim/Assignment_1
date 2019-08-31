@@ -1,0 +1,13 @@
+<div *ngFor = "let message of chatMessage" > 
+  <h1>{{message.name}} -> {{message.message}}</h1>
+</div>
+
+<input type = 'text' placeholder="enter message here" [(ngModel)] = "message" >
+<input type = 'button' value = 'submit message' (click) ="sendMessage()" > 
+
+<div *ngIf = 'priority >= 2' >
+  <div *ngFor = "let name of groupPeople" >
+    <h1> {{name}}</h1>
+  </div>
+
+</div>

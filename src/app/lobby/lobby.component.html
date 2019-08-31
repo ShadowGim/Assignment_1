@@ -1,0 +1,10 @@
+ 
+  <div id = 'chat-room'> 
+    <div *ngFor = 'let room of chatRoom' >
+      <input type = 'button' (click) = 'gotToRoom(room)' value = '{{room}}' > 
+    </div>  
+  </div>
+<div *ngIf = "priority >= 2">
+  <input type = "text" name = "create" [(ngModel)] = 'newRoom' placeholder="enter name of new chat room" > 
+  <input type = "button" name = 'button' (click) = 'room()' value = 'submit'> 
+</div>
